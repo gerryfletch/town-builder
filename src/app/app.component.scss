@@ -1,0 +1,12 @@
+#header {
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+  background: linear-gradient(#2b9be2, #47f3ff);
+}
+
+#rest {
+  width: 100%;
+  height: calc(100vh - 400px);
+  background-color: #47f3ff;
+}
