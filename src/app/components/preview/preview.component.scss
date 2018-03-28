@@ -1,0 +1,46 @@
+#preview {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+
+  // this will keep all components in the bottom middle
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center
+
+}
+
+#floor, #house-body, #roof {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+#floor {
+  width: 100%;
+  height: 40px;
+  background-color: brown;
+}
+
+#house-body {
+  width: 80%;
+  height: 300px;
+  background-color: gray;
+
+  display: flex;
+  flex-direction: column;
+
+  .row {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+#roof {
+  width: 85%;
+  height: 30%;
+  background-color: darkblue;
+}

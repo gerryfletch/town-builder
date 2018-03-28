@@ -1,0 +1,35 @@
+$game-height: 350px;
+
+#container {
+  width: 100%;
+  min-height: 550px;
+  height: 100vh;
+  background-color: #693f55;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  height: calc(100% - #{$game-height});
+  min-height: 300px;
+  background: linear-gradient(#2b9be2, #47f3ff);
+}
+
+main {
+  overflow-x: scroll;
+  height: $game-height;
+  background: #693f55 url('../../../assets/clouds.png') repeat-x;
+
+  display:flex;
+  align-items: flex-end;
+
+  position: relative;
+
+  #content {
+    position: absolute;
+    bottom: 160px;
+  }
+
+}
