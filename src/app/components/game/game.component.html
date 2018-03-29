@@ -1,16 +1,19 @@
 <div id="container">
-
+  <div id="sun">
+    <img src="../../../assets/props/sun.png" />
+  </div>
   <header>
-    <button>START!</button>
+    <button (click)="startGame()">START!</button>
+    <dialogue-modal></dialogue-modal>
   </header>
 
   <main>
     <div id="content">
-      <prop [img]="path + 'props/sign.png'" [coordinate]="760" (click)="buy()"></prop>
-      <prop [img]="path + 'props/sign.png'" [coordinate]="1040"></prop>
+      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="760" (click)="buy(1)"></prop>
+      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1040"></prop>
     </div>
 
-    <img src="{{path}}background.png" id="background"/>
+    <img src="{{pathToAssets}}background.png" id="background"/>
   </main>
 
 </div>

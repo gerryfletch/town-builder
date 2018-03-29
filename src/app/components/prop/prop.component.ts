@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PropComponent {
 
-  @Input() img: String;
+  @Input() img: string;
   @Input() coordinate: number;
 
   constructor() { }

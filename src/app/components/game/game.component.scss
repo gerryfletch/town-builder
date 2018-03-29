@@ -1,4 +1,10 @@
-$game-height: 350px;
+@import '../../../assets/config';
+
+#sun {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+}
 
 #container {
   width: 100%;
@@ -15,6 +21,9 @@ header {
   height: calc(100% - #{$game-height});
   min-height: 300px;
   background: linear-gradient(#2b9be2, #47f3ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {

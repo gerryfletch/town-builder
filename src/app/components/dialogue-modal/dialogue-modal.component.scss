@@ -1,0 +1,67 @@
+#overlay, #container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#overlay {
+  z-index: 10;
+  background-color: black;
+  opacity: 0.8;
+}
+
+#container {
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+
+  #dialogue, #dialogue-controls {
+    max-width: 700px;
+    width: 80%;
+  }
+
+  #dialogue {
+    max-width: 700px;
+    width: 80%;
+
+    .icon, .text {
+      height: 100%;
+      float: left;
+    }
+
+    .icon {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text {
+      width: calc(100% - 250px);
+      box-sizing: border-box;
+      padding: 5px;
+      background-color: antiquewhite;
+      font-family: 'VT323', monospace;
+      font-size: 1.5em;
+
+      border: 30px solid transparent;
+      border-image: url('../../../assets/props/border.png') 30 round;
+
+    }
+
+  }
+
+  #dialogue-controls {
+    margin-top: 10px;
+    height: 40px;
+
+    img { float: right; }
+  }
+
+}
