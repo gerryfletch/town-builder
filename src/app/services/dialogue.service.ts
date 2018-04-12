@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import {Dialogue, DialogueScene, Input} from '../_models/dialogue-model';
+import {Dialogue} from '../_models/dialogue-model';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class DialogueService {
 
-  private dialogues$: Observable<DialogueScene[]>;
-  private dialogues: Subject<DialogueScene[]>;
+  private dialogues$: Observable<Dialogue[]>;
+  private dialogues: Subject<Dialogue[]>;
 
   constructor() {
-    this.dialogues = new Subject<DialogueScene[]>();
+    this.dialogues = new Subject<Dialogue[]>();
     this.dialogues$ = this.dialogues.asObservable();
   }
 
@@ -18,24 +18,15 @@ export class DialogueService {
     return {author, text};
   }
 
-  public constructInput(placeholder: string): Input {
-    return {placeholder};
-  }
-
-  public constructDialogueScene(dialogue: Dialogue, input: Input): DialogueScene {
-    return {dialogue, input};
-  }
-
-  public displayDialogue(dialogue: DialogueScene) {
+  public displayDialogue(dialogue: Dialogue) {
     this.dialogues.next([dialogue]);
-    // this.dialogues.push(dialogue);
   }
 
-  public displayMultipleDialogues(dialogues: DialogueScene[]) {
+  public displayMultipleDialogues(dialogues: Dialogue[]) {
     this.dialogues.next(dialogues);
   }
 
-  public getDialogues(): Observable<DialogueScene[]> {
+  public getDialogues(): Observable<Dialogue[]> {
     return this.dialogues$;
   }
 

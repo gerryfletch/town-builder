@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DialogueService} from '../../services/dialogue.service';
-import {DialogueScene} from '../../_models/dialogue-model';
+import {Dialogue} from '../../_models/dialogue-model';
 
 @Component({
   selector: 'game',
@@ -21,17 +21,16 @@ export class GameComponent implements OnInit {
     this.dialogueService.displayMultipleDialogues(dialogueScenes);
   }
 
-  private createStartDialogue(): DialogueScene[] {
+  private createStartDialogue(): Dialogue[] {
     const character: string = "valery";
     const texts: string[] = [
       "Hello!<br>It's not often we get visitors...<br>You're in Towny... Population: 2!<br><br>What's your name?",
       "You must be feeling tired. How are you", "Please enter your name."];
-    let dialogueScenes: DialogueScene[] = [];
+    let dialogueScenes: Dialogue[] = [];
 
     for (let i = 0; i < texts.length; i++) {
       const dialogue = this.dialogueService.constructDialogue(character, texts[i]);
-      const dialogueScene = this.dialogueService.constructDialogueScene(dialogue, null);
-      dialogueScenes.push(dialogueScene);
+      dialogueScenes.push(dialogue);
     }
 
     return dialogueScenes;
@@ -39,8 +38,7 @@ export class GameComponent implements OnInit {
 
   buy(plot: number) {
     const dialogue = this.dialogueService.constructDialogue("Poo head", "lol!");
-    const dialogueScene = this.dialogueService.constructDialogueScene(dialogue, null);
-    this.dialogueService.displayDialogue(dialogueScene);
+    this.dialogueService.displayDialogue(dialogue);
   }
 
 }
