@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DialogueService} from '../../services/dialogue.service';
-import {Dialogue} from '../../_models/dialogue-model';
+import {DialogueService} from '../../_services/dialogue.service';
 
 @Component({
   selector: 'game',
@@ -17,28 +16,14 @@ export class GameComponent implements OnInit {
   }
 
   startGame() {
-    const dialogueScenes = this.createStartDialogue();
-    this.dialogueService.displayMultipleDialogues(dialogueScenes);
-  }
-
-  private createStartDialogue(): Dialogue[] {
-    const character: string = "valery";
-    const texts: string[] = [
-      "Hello!<br>It's not often we get visitors...<br>You're in Towny... Population: 2!<br><br>What's your name?",
-      "You must be feeling tired. How are you", "Please enter your name."];
-    let dialogueScenes: Dialogue[] = [];
-
-    for (let i = 0; i < texts.length; i++) {
-      const dialogue = this.dialogueService.constructDialogue(character, texts[i]);
-      dialogueScenes.push(dialogue);
-    }
-
-    return dialogueScenes;
+    this.dialogueService.getDialogueByName("start_game").subscribe(
+      res => {
+        this.dialogueService.displayMultipleDialogues(res);
+      }
+    );
   }
 
   buy(plot: number) {
-    const dialogue = this.dialogueService.constructDialogue("Poo head", "lol!");
-    this.dialogueService.displayDialogue(dialogue);
   }
 
 }

@@ -6,7 +6,9 @@ import { PreviewComponent } from './components/preview/preview.component';
 import { GameComponent } from './components/game/game.component';
 import { PropComponent } from './components/prop/prop.component';
 import { DialogueModalComponent } from './components/dialogue-modal/dialogue-modal.component';
-import {DialogueService} from './services/dialogue.service';
+import {DialogueService} from './_services/dialogue.service';
+import {HttpModule} from '@angular/http';
+import { WebIdeComponent } from './components/web-ide/web-ide.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import {DialogueService} from './services/dialogue.service';
     PreviewComponent,
     GameComponent,
     PropComponent,
-    DialogueModalComponent
+    DialogueModalComponent,
+    WebIdeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [DialogueService],
   bootstrap: [AppComponent]

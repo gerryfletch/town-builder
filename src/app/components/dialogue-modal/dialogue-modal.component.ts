@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {DialogueService} from '../../services/dialogue.service';
+import {DialogueService} from '../../_services/dialogue.service';
 import {Dialogue} from '../../_models/dialogue-model';
 
 @Component({
