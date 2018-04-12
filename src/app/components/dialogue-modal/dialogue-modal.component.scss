@@ -1,108 +1,67 @@
-#overlay, #container {
-  width: 100vw;
-  height: 100vh;
+#container {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-#overlay {
-  z-index: 10;
-  background-color: black;
-  opacity: 0.43;
-}
-
-#container {
-  z-index: 20;
-
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.43);
+}
 
-  margin-top: 100px;
+#dialogue {
+  margin-top: 150px;
+  height: 200px;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
 
-  #dialogue, #dialogue-controls {
-    max-width: 700px;
-    width: 80%;
+  .icon, .box {
+    height: 100%;
+    float: left;
   }
 
-  #dialogue {
-    height: 200px;
-    width: 80%;
-    max-width: 700px;
+  .icon {
+    margin-right: 30px;
     display: flex;
-    justify-content: space-between;
-
-    .icon, .box {
-      height: 100%;
-      float: left;
-    }
-
-    .icon {
-      margin-right: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .box {
-      width: 500px;
-      box-sizing: border-box;
-      font-family: 'VT323', monospace;
-      font-size: 1.5em;
-
-      border: 25px solid transparent;
-      border-image: url('../../../assets/props/border.png') 24 round;
-      background-color: #cc9145;
-      background-clip: padding-box;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .text {
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      padding: 10px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-
-      /* Let's get this party started */
-      &::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      /* Track */
-      &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        background: rgba(176, 91, 17, 1);
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-      }
-      &::-webkit-scrollbar-thumb:window-inactive {
-        background: rgba(255, 0, 0, 0.4);
-      }
-
-    }
-
-  }sssss
-
-  #dialogue-controls {
-    margin-top: 10px;
-    height: 40px;
-    img {
-      cursor: pointer;
-      float: right;
-    }
+    align-items: center;
+    justify-content: center;
   }
 
+  .box {
+    width: 500px;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+
+    border: 25px solid transparent;
+    border-image: url('../../../assets/props/border.png') 24 round;
+    background-color: #cc9145;
+    background-clip: padding-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+}
+
+#dialogue-controls {
+  margin-top: 10px;
+  height: 40px;
+  img {
+    cursor: pointer;
+    float: right;
+  }
 }
