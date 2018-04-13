@@ -9,7 +9,9 @@
            style="background-color: #fdf6e3"
       ></div>
       <div id="preview">
+        <div id="render-area" [innerHTML]="code | safeHtml">
 
+        </div>
       </div>
     </main>
     <footer>

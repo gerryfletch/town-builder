@@ -54,6 +54,20 @@
 
     #preview {
       width: calc(50% - 8px);
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      #render-area {
+        width: 159px; // original size
+        //width: calc(159px * 2);
+        min-height: 200px;
+        border: 1px dotted #b7b7b7;
+        margin-bottom: 50px;
+        zoom: 200%;
+      }
+
     }
 
   }
