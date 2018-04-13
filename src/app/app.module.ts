@@ -1,14 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { PreviewComponent } from './components/preview/preview.component';
-import { GameComponent } from './components/game/game.component';
-import { PropComponent } from './components/prop/prop.component';
-import { DialogueModalComponent } from './components/dialogue-modal/dialogue-modal.component';
+import {AppComponent} from './app.component';
+import {PreviewComponent} from './components/preview/preview.component';
+import {GameComponent} from './components/game/game.component';
+import {PropComponent} from './components/prop/prop.component';
+import {DialogueModalComponent} from './components/dialogue-modal/dialogue-modal.component';
 import {DialogueService} from './_services/dialogue.service';
 import {HttpModule} from '@angular/http';
-import { WebIdeComponent } from './components/web-ide/web-ide.component';
+import {WebIdeComponent} from './components/web-ide/web-ide.component';
+import {WebIdeService} from './_services/web-ide.service';
+import {AceEditorModule} from 'ng2-ace-editor';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,11 @@ import { WebIdeComponent } from './components/web-ide/web-ide.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    AceEditorModule
   ],
-  providers: [DialogueService],
+  providers: [DialogueService, WebIdeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

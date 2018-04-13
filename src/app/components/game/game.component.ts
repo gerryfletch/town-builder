@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DialogueService} from '../../_services/dialogue.service';
+import {WebIdeService} from '../../_services/web-ide.service';
 
 @Component({
   selector: 'game',
@@ -10,7 +11,8 @@ export class GameComponent implements OnInit {
 
   pathToAssets: string = "../../assets/";
 
-  constructor(private dialogueService: DialogueService) { }
+  constructor(private dialogueService: DialogueService,
+              private ideService: WebIdeService) { }
 
   ngOnInit() {
   }
@@ -24,6 +26,7 @@ export class GameComponent implements OnInit {
   }
 
   buy(plot: number) {
+    this.ideService.open();
   }
 
 }

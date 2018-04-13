@@ -33,8 +33,10 @@
   .box {
     width: 500px;
     box-sizing: border-box;
-    font-family: 'VT323', monospace;
-    font-size: 1.5em;
+
+    font-family: 'BRK', cursive;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.75);
 
     border: 25px solid transparent;
     border-image: url('../../../assets/props/border.png') 24 round;
@@ -50,7 +52,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     overflow-y: scroll;
     overflow-x: hidden;
   }

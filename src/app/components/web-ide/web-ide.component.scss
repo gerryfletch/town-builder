@@ -1,9 +1,12 @@
-#container {
+#container, #exit {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+#container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +23,7 @@
   height: 80vh;
   min-height: 600px;
   max-height: 1200px;
+  z-index: 20;
 
   border: 25px solid transparent;
   border-image: url('../../../assets/props/border.png') 24 round;
@@ -41,6 +45,11 @@
       border-right: 16px solid transparent;
       border-image: url('../../../assets/props/single-border-vertical.png') 24 round;
       width: calc(50% - 8px);
+
+      .ace_content, .ace_tm, .ace-tm {
+        background-color: #fdf6e3!important;
+      }
+
     }
 
     #preview {

@@ -1,10 +1,13 @@
-<div id="container">
+<div id="container" *ngIf="visible">
   <div id="ide">
 
     <main>
-      <div id="editor">
-
-      </div>
+      <div id="editor" ace-editor
+           [(text)]="code"
+           [mode]="'html'"
+           [theme]="'eclipse'"
+           style="background-color: #fdf6e3"
+      ></div>
       <div id="preview">
 
       </div>
@@ -62,4 +65,5 @@
     </footer>
 
   </div>
+  <div id="exit" (click)="close()"></div>
 </div>

@@ -1,0 +1,22 @@
+{
+  "building_blocks": {
+    "floor": {
+      "tag": "<div id=\"floor\">...</div>",
+      "description": "A floor. Almost every building requires one.",
+      "icon": "assets/blocks/floor-icon.png",
+      "image": "assets/blocks/floor.png"
+    },
+    "body": {
+      "tag": "<div class=\"house-body\">...</div>",
+      "description": "A 2x1 row of house body blocks. Room for windows and doors!",
+      "icon": "assets/blocks/house-body-icon.png",
+      "image": "assets/blocks/house-body.png"
+    }
+  },
+  "decorative_blocks": {
+
+  },
+  "style_classes": {
+
+  }
+}
