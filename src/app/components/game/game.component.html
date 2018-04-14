@@ -4,10 +4,27 @@
     <img src="../../../assets/props/sun.png" />
   </div>
   <header>
-    <button (click)="startGame()">START!</button>
     <dialogue-modal></dialogue-modal>
+    <nav [style.opacity]="started ? '0.4' : '1'">
+      <div class="container">
+        <h1>Town Builder</h1>
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">EDUCATION</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="start-game" *ngIf="! started" [@slideInOut]>
+      <img src="../../../assets/logo.png">
+      <p>Learn, practise and master HTML.<br>A game by Gerry Fletcher.</p>
+      <button (click)="startGame()">START!</button>
+    </div>
   </header>
 
+  <div id="overlay" *ngIf="! started"></div>
+
+  <div id="sky"></div>
   <main id="horizontal">
     <div id="content">
       <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>

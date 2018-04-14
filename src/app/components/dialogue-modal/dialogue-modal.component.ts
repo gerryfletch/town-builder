@@ -1,11 +1,23 @@
 import {Component} from '@angular/core';
 import {DialogueService} from '../../_services/dialogue.service';
 import {Dialogue} from '../../_models/dialogue-model';
+import {style, transition, trigger, animate} from '@angular/animations';
 
 @Component({
   selector: 'dialogue-modal',
   templateUrl: './dialogue-modal.component.html',
-  styleUrls: ['./dialogue-modal.component.scss']
+  styleUrls: ['./dialogue-modal.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style ({opacity: '0'}),
+        animate ('1000ms ease-in-out', style({opacity: '1'}))
+      ]),
+      transition(':leave', [
+        animate ('1000ms ease-in-out', style({opacity: '0'}))
+      ])
+    ])
+  ]
 })
 export class DialogueModalComponent {
   visible: boolean;

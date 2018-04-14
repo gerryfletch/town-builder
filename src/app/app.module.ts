@@ -12,6 +12,7 @@ import {WebIdeComponent} from './components/web-ide/web-ide.component';
 import {WebIdeService} from './_services/web-ide.service';
 import {AceEditorModule} from 'ng2-ace-editor';
 import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
   imports: [
     BrowserModule,
     HttpModule,
-    AceEditorModule
+    AceEditorModule,
+    BrowserAnimationsModule
   ],
   providers: [DialogueService, WebIdeService],
   bootstrap: [AppComponent]

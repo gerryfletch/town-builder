@@ -6,7 +6,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  z-index: 20;
+  z-index: 30;
   background-color: rgba(0, 0, 0, 0.43);
 }
 
@@ -47,6 +47,8 @@
     align-items: center;
     justify-content: center;
   }
+
+
 
   .text {
     width: 100%;
