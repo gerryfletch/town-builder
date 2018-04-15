@@ -16,6 +16,15 @@ import {animate, style, transition, trigger} from '@angular/animations';
       transition(':leave', [
         animate('1200ms ease-in', style({transform: 'translateY(-100%)'}))
       ])
+    ]),
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style ({opacity: '0'}),
+        animate ('1000ms ease-in-out', style({opacity: '1'}))
+      ]),
+      transition(':leave', [
+        animate ('1000ms ease-in-out', style({opacity: '0'}))
+      ])
     ])
   ]
 })
@@ -47,17 +56,12 @@ export class GameComponent implements OnInit {
   }
 
   startGame() {
+    console.log("hello");
     this.started = true;
-
     setTimeout(() => {
-      this.dialogueService.getDialogueByName('start_game').subscribe(
-        res => {
-          this.dialogueService.displayMultipleDialogues(res);
-        }
-      );
+      console.log("lol");
+      this.dialogueService.displayDialogueByName('start_game');
     }, 1000);
-
-
   }
 
   buy(plot: number) {

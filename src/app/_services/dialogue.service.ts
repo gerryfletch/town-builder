@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Dialogue, Dialogues} from '../_models/dialogue-model';
+import {Dialogue} from '../_models/dialogue-model';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {Http} from '@angular/http';
@@ -28,11 +28,13 @@ export class DialogueService {
     return this.dialogues$;
   }
 
-  public getDialogueByName(name: string): Observable<Dialogue[]> {
-    return this.http.get('assets/data/dialogue.json')
-      .map(res => {
-        let scenes = res.json();
-        if (name in scenes) {
+  public displayDialogueByName(name: string) {
+    this.http.get('assets/data/dialogue.json')
+      .map(res => res.json())
+      .subscribe(
+        scenes => {
+          if (!(name in scenes)) return;
+
           let scene = scenes[name];
           let dialogues: Dialogue[] = [];
 
@@ -40,10 +42,8 @@ export class DialogueService {
             dialogues.push({author: scene.author, text: scene.texts[i]} as Dialogue);
           }
 
-          return dialogues;
-        }
-        return null;
-      });
+          this.displayMultipleDialogues(dialogues);
+        });
   }
 
 }
