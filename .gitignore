@@ -1,7 +1,14 @@
 node_modules/
+e2e/
+
 .angular-cli.json
 .editorconfig
 
 .idea/
 town-builder.iml
 .angular-cli.json
+
+karma.conf.js
+protractor.conf.js
+tsconfig.json
+tslint.json
