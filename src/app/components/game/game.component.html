@@ -27,11 +27,20 @@
   <div id="sky"></div>
   <main id="horizontal">
     <div id="content">
-      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>
-      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1741"></prop>
+
+      <div style="display: flex; align-items: flex-end;width: 100%; height: 100%; position: relative;">
+        <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>
+        <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1741"></prop>
+
+        <prop [img]="pathToAssets + 'characters/leah-prop.png'" [coordinate]="400"></prop>
+        <prop [img]="pathToAssets + 'characters/valery-prop.png'" [coordinate]="500"></prop>
+      </div>
+
+
+
     </div>
 
-    <img src="{{pathToAssets}}map.png" id="background"/>
+    <img src="{{pathToAssets}}map2.png" id="background"/>
   </main>
 
 </div>
