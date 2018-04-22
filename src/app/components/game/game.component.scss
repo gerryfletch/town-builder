@@ -143,8 +143,12 @@ main {
   position: relative;
 
   #content {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    bottom: 273px;
+    padding-bottom: 188px;
+    display: flex;
+    align-items: flex-end;
   }
 
 }
