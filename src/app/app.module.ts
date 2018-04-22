@@ -13,6 +13,7 @@ import {WebIdeService} from './_services/web-ide.service';
 import {AceEditorModule} from 'ng2-ace-editor';
 import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PropsService } from './_services/props.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AceEditorModule,
     BrowserAnimationsModule
   ],
-  providers: [DialogueService, WebIdeService],
+  providers: [DialogueService, WebIdeService, PropsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,0 +1,29 @@
+{
+    [
+        {
+            "name": "For sale sign",
+            "image": "props/sign.png",
+            "coordinate": 1230,
+            "action": "buy(1)"
+        },
+        {
+            "name": "For sale sign",
+            "image": "props/sign.png",
+            "coordinate": 1741,
+            "action": null
+        },
+        {
+            "name": "Valery",
+            "image": "characters/valery.png",
+            "coordinate": 100,
+            "action": null
+            
+        },
+        {
+            "name": "Leah",
+            "image": "character/leah.png",
+            "coordinate": 200,
+            "action": null
+        }
+    ]
+}

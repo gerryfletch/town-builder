@@ -1,10 +1,36 @@
 import {Injectable} from '@angular/core';
-import {Dialogue} from '../_models/dialogue-model';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
+@Injectable()
+export class PropsService {
+
+      
+    constructor(private http: Http) { 
+    }
+    
+    public getProps() {
+        
+        console.log("started");
+        
+        this.http.get('assets/data/props.json')
+        .map(results => results.json())
+        .subscribe(
+            gameProps => {
+                console.log(gameProps);
+            }
+        );
+    }
+    
+    
+
+}
+
+
+
+/*
 @Injectable()
 export class DialogueService {
 
@@ -46,4 +72,4 @@ export class DialogueService {
         });
   }
 
-}
+}*/

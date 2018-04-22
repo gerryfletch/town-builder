@@ -26,9 +26,10 @@
 
   <div id="sky"></div>
   <main id="horizontal">
-    <div id="content">
-      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>
-      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1741"></prop>
+    <div id="content" *ngFor="let prop of props">
+        <prop [img]=prop.image [coordinate]=prop.coordinate (click)=prop.action ></prop> 
+     <!-- <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>
+      <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1741" ></prop> -->
     </div>
 
     <img src="{{pathToAssets}}map.png" id="background"/>

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {DialogueService} from '../../_services/dialogue.service';
 import {WebIdeService} from '../../_services/web-ide.service';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {PropsService} from '../../_services/props.service';
+
 
 @Component({
   selector: 'game',
@@ -31,15 +33,24 @@ import {animate, style, transition, trigger} from '@angular/animations';
 export class GameComponent implements OnInit {
 
   pathToAssets: string = '../../assets/';
-  started: boolean;
+  started: boolean = true;
 
   constructor(private dialogueService: DialogueService,
-              private ideService: WebIdeService) {
+              private ideService: WebIdeService,
+              private propService: PropsService) {
     this.started = false;
   }
 
   ngOnInit() {
+      
+    //load and display props
+     // props.getProps
+    
     // Game Horizontal Scroll
+      
+    this.propService.getProps();
+      
+      
     let elementId = "horizontal";
     function scrollHorizontally(e) {
       e = window.event || e;
@@ -56,12 +67,14 @@ export class GameComponent implements OnInit {
   }
 
   startGame() {
-    console.log("hello");
+      this.propService.getProps();
+      
+    /*console.log("hello");
     this.started = true;
     setTimeout(() => {
       console.log("lol");
       this.dialogueService.displayDialogueByName('start_game');
-    }, 1000);
+    }, 1000);*/
   }
 
   buy(plot: number) {
