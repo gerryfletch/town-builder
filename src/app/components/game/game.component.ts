@@ -3,7 +3,7 @@ import {DialogueService} from '../../_services/dialogue.service';
 import {WebIdeService} from '../../_services/web-ide.service';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {PropsService} from '../../_services/props.service';
-
+import {Prop} from '../../_models/prop-model';
 
 @Component({
   selector: 'game',
@@ -33,7 +33,8 @@ import {PropsService} from '../../_services/props.service';
 export class GameComponent implements OnInit {
 
   pathToAssets: string = '../../assets/';
-  started: boolean = true;
+  started: boolean;
+  props: Prop[];
 
   constructor(private dialogueService: DialogueService,
               private ideService: WebIdeService,
@@ -41,14 +42,11 @@ export class GameComponent implements OnInit {
     this.started = false;
   }
 
-  ngOnInit() {
-      
-    //load and display props
-     // props.getProps
-    
-    // Game Horizontal Scroll
-      
-    this.propService.getProps();
+  ngOnInit() {      
+    this.propService.getProps()
+        .subscribe(
+            props => this.props = props
+    );
       
       
     let elementId = "horizontal";
@@ -66,17 +64,17 @@ export class GameComponent implements OnInit {
 
   }
 
-  startGame() {
-      this.propService.getProps();
-      
-    /*console.log("hello");
+  startGame() {      
     this.started = true;
-    setTimeout(() => {
-      console.log("lol");
-      this.dialogueService.displayDialogueByName('start_game');
-    }, 1000);*/
+    setTimeout(() => {      this.dialogueService.displayDialogueByName('start_game');
+    }, 1000);
   }
-
+    
+    clickProp(action: string) {        
+        if (action == null) return;
+        eval('this.' + action);
+    }
+    
   buy(plot: number) {
     this.ideService.open();
   }

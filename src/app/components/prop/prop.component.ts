@@ -13,24 +13,10 @@ import 'rxjs/add/operator/map';
 })
 export class PropComponent {
     
-  @Input() img: string; //URL to image
-  @Input() coordinate: number; //position on screen 
-    @Input() action: string;
+    @Input() img: string;
+    @Input() coordinate: number;
     
 
-  constructor(private http: Http) { 
-  
-  }
-    
-    public getProps() {
-        this.http.get('assets/data/props.json')
-            .map(res => res.json())
-            .subscribe(
-                data => {
-                    console.log(data);
-                }
-        );
-        
-    }
+    constructor(private http: Http) {}
 
 }

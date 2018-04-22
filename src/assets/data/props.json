@@ -1,5 +1,5 @@
 {
-    [
+    "props": [
         {
             "name": "For sale sign",
             "image": "props/sign.png",
@@ -14,14 +14,14 @@
         },
         {
             "name": "Valery",
-            "image": "characters/valery.png",
+            "image": "characters/valery-prop.png",
             "coordinate": 100,
             "action": null
             
         },
         {
             "name": "Leah",
-            "image": "character/leah.png",
+            "image": "characters/leah-prop.png",
             "coordinate": 200,
             "action": null
         }

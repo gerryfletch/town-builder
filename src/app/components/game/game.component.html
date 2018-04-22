@@ -28,13 +28,11 @@
   <main id="horizontal">
     <div id="content">
 
-      <div style="display: flex; align-items: flex-end;width: 100%; height: 100%; position: relative;">
-        <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1230" (click)="buy(1)"></prop>
-        <prop [img]="pathToAssets + 'props/sign.png'" [coordinate]="1741"></prop>
-
-        <prop [img]="pathToAssets + 'characters/leah-prop.png'" [coordinate]="400"></prop>
-        <prop [img]="pathToAssets + 'characters/valery-prop.png'" [coordinate]="500"></prop>
-      </div>
+        <prop *ngFor="let prop of props"
+            [img]="pathToAssets + prop.image"
+            [coordinate]="prop.coordinate"
+            (click)="clickProp(prop.action)"
+        ></prop>
 
     </div>
 

@@ -3,25 +3,17 @@ import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Prop} from '../_models/prop-model';
 
 @Injectable()
 export class PropsService {
 
       
-    constructor(private http: Http) { 
-    }
+    constructor(private http: Http) {}
     
-    public getProps() {
-        
-        console.log("started");
-        
-        this.http.get('assets/data/props.json')
-        .map(results => results.json())
-        .subscribe(
-            gameProps => {
-                console.log(gameProps);
-            }
-        );
+    public getProps(): Observable<Prop[]> {
+        return this.http.get('assets/data/props.json')
+            .map(res => res.json().props as Prop[]);
     }
     
     

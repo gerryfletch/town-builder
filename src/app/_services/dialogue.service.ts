@@ -28,7 +28,7 @@ export class DialogueService {
     return this.dialogues$;
   }
 
-  public displayDialogueByName(name: string) {
+  public displayDialogueByName( name: string) {
     this.http.get('assets/data/dialogue.json')
       .map(res => res.json())
       .subscribe(
