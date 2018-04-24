@@ -1,0 +1,5 @@
+<prop *ngFor="let prop of props"
+      [img]="pathToAssets + prop.image"
+      [coordinate]="prop.coordinate"
+      (click)="clickProp(prop.action)"
+></prop>

@@ -1,40 +1,16 @@
 <web-ide></web-ide>
 <div id="container">
   <div id="sun">
-    <img src="../../../assets/props/sun.png" />
+    <img src="../../../assets/props/sun.png"/>
   </div>
-  <header>
-    <dialogue-modal></dialogue-modal>
-    <nav [style.opacity]="started ? '0.4' : '1'">
-      <div class="container">
-        <h1>Town Builder</h1>
-        <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">CONTACT</a></li>
-          <li><a href="#">EDUCATION</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div id="start-game" *ngIf="! started" [@slideInOut]>
-      <img src="../../../assets/logo.png">
-      <p>Learn, practise and master HTML.<br>A game by Gerry Fletcher.</p>
-      <button (click)="startGame()">START!</button>
-    </div>
-  </header>
+
+  <game-header (notifyStarted)="started = true"></game-header>
 
   <div id="overlay" *ngIf="! started" [@fadeInOut]></div>
 
   <div id="sky"></div>
   <main id="horizontal">
-    <div id="content">
-
-        <prop *ngFor="let prop of props"
-            [img]="pathToAssets + prop.image"
-            [coordinate]="prop.coordinate"
-            (click)="clickProp(prop.action)"
-        ></prop>
-
-    </div>
+    <map id="content"></map>
 
     <img src="{{pathToAssets}}map2.png" id="background"/>
   </main>

@@ -14,6 +14,8 @@ import {AceEditorModule} from 'ng2-ace-editor';
 import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PropsService } from './_services/props.service';
+import { MapComponent } from './components/game/map/map.component';
+import { HeaderComponent } from './components/game/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PropsService } from './_services/props.service';
     PropComponent,
     DialogueModalComponent,
     WebIdeComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    MapComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
