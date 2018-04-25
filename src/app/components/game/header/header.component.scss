@@ -1,8 +1,5 @@
-@import '../../../../assets/config';
-
 header {
-  height: calc(100% - #{$game-height});
-  min-height: 300px;
+  height: 400px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -80,7 +77,7 @@ header {
       border-image-width: 15px 15px 15px 15px;
       border-image-outset: 0 0 0;
       border-image-repeat: repeat repeat;
-      border-image-source: url('../../../../assets/button.png');
+      border-image-source: url('../../../../assets/img/button.png');
       background-color: #d3bf8f;
       background-clip: padding-box;
 

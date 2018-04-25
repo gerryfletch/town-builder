@@ -1,18 +1,16 @@
 <web-ide></web-ide>
+
+<!-- Fixed positioned elements -->
+<div id="sun">
+  <img src="{{pathToAssets}}props/sun.png"/>
+</div>
+<div id="overlay" *ngIf="! started" [@fadeInOut]></div>
+
 <div id="container">
-  <div id="sun">
-    <img src="../../../assets/props/sun.png"/>
-  </div>
-
   <game-header (notifyStarted)="started = true"></game-header>
-
-  <div id="overlay" *ngIf="! started" [@fadeInOut]></div>
-
   <div id="sky"></div>
   <main id="horizontal">
-    <map id="content"></map>
-
-    <img src="{{pathToAssets}}map2.png" id="background"/>
+    <map></map>
+    <img src="{{pathToAssets}}img/map.png" id="background"/>
   </main>
-
 </div>

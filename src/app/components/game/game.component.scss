@@ -1,19 +1,26 @@
-@import '../../../assets/config';
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#sky {
+  background: linear-gradient(#2b9be2, #47f3ff);
+  flex-grow: 2;
+}
+
+main {
+  overflow-x: scroll;
+  background: #2fbdff url('../../../assets/img/clouds.png') repeat-x;
+  position: relative;
+}
 
 #sun {
   position: fixed;
   right: 25px;
   top: 25px;
-}
-
-#container {
-  width: 100%;
-  min-height: 550px;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 #overlay {
@@ -22,31 +29,4 @@
   position: fixed;
   background-color: rgba(0, 0, 0, 0.43);
   z-index: 20;
-}
-
-#sky {
-  height: calc(100% - #{$game-height});
-  min-height: 300px;
-  width: 100%;
-  background: linear-gradient(#2b9be2, #47f3ff);
-}
-
-main {
-  overflow-x: scroll;
-  background: #2fbdff url('../../../assets/clouds.png') repeat-x;
-
-  display:flex;
-  align-items: flex-end;
-
-  position: relative;
-
-  #content {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    padding-bottom: 188px;
-    display: flex;
-    align-items: flex-end;
-  }
-
 }

@@ -15,14 +15,14 @@
         {
             "name": "Valery",
             "image": "characters/valery-prop.png",
-            "coordinate": 100,
+            "coordinate": 700,
             "action": null
-            
+
         },
         {
             "name": "Leah",
             "image": "characters/leah-prop.png",
-            "coordinate": 200,
+            "coordinate": 750,
             "action": null
         }
     ]

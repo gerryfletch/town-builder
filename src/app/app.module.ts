@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {PreviewComponent} from './components/preview/preview.component';
 import {GameComponent} from './components/game/game.component';
-import {PropComponent} from './components/prop/prop.component';
+import {PropComponent} from './components/game/prop/prop.component';
 import {DialogueModalComponent} from './components/dialogue-modal/dialogue-modal.component';
 import {DialogueService} from './_services/dialogue.service';
 import {HttpModule} from '@angular/http';
