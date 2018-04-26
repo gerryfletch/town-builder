@@ -52,22 +52,18 @@
 
     }
 
-    #preview {
+    #preview-container {
       width: calc(50% - 8px);
+      height: 100%;
 
       display: flex;
       align-items: flex-end;
       justify-content: center;
 
-      #render-area {
-        width: 159px; // original size
-        //width: calc(159px * 2);
-        min-height: 200px;
-        border: 1px dotted #b7b7b7;
-        margin-bottom: 50px;
-        zoom: 200%;
-      }
+      box-sizing: border-box;
+      padding-bottom: 50px;
 
+      //background: url('../../../assets/img/preview-background.png') no-repeat 50% 50%;
     }
 
   }

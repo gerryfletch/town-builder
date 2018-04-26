@@ -9,10 +9,8 @@
            [theme]="'eclipse'"
            style="background-color: #fdf6e3"
       ></div>
-      <div id="preview">
-        <div id="render-area" [innerHTML]="code | safeHtml">
-
-        </div>
+      <div id="preview-container">
+        <preview></preview>
       </div>
     </main>
     <footer>

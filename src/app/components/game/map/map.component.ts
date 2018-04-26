@@ -17,12 +17,10 @@ export class MapComponent implements OnInit {
               private propService: PropsService) { }
 
   ngOnInit() {
-
     this.propService.getProps()
       .subscribe(
         props => this.props = props
       );
-
   }
 
   clickProp(action: string) {
@@ -31,7 +29,7 @@ export class MapComponent implements OnInit {
   }
 
   buy(plot: number) {
-    this.ideService.displayIdeByTask("tutorial_house");
+    this.ideService.openCurrentTask();
   }
 
 }
