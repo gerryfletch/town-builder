@@ -3,24 +3,35 @@
     "icon": "valery",
     "transcript": "Build yourself a house!<br> A house requires a <b>roof</b>, <b>body</b> and a <b>door.</b>",
     "plans": "assets/plans/tutorial_house.png",
-    "inventory": {
-      "core_blocks": {
-        "floor": {
-          "tag": "<div id=\"floor\">...</div>",
-          "description": "A floor. Almost every building requires one.",
-          "icon": "assets/blocks/floor-icon.png",
-          "image": "assets/blocks/floor.png"
-        },
-        "body": {
-          "tag": "<div class=\"house-body\">...</div>",
-          "description": "A 2x1 row of house body blocks. Room for windows and doors!",
-          "icon": "assets/blocks/house-body-icon.png",
-          "image": "assets/blocks/house-body.png"
-        }
-      },
-      "css_classes": {
-
+    "inventory": null,
+    "hints": [
+      "Every house requires a base, body, and roof.",
+      "Try adding in decorations. Try the class 'window'!"
+    ],
+    "resources": [
+      {
+        "name": "W3Schools",
+        "link": "www.w3schools.com",
+        "description": "learn html and css online"
       }
-    }
+    ]
+  },
+  "town_hall": {
+    "icon": "leah",
+    "transcript": "If we're going to make this town, we're going to need a town hall!",
+    "plans": "assets/plans/town_hall.png",
+    "inventory": null,
+    "hints": [
+      "A town hall needs to be large enough to accommodate all of the residents",
+      "As the centre piece of our town, we should make the town hall special in some way."
+    ],
+    "resources": [
+      {
+        "name": "CodeAcademy",
+        "link": "www.codecademy.com",
+        "description": "learn html and css online"
+      }
+    ]
   }
 }
+

@@ -31,7 +31,7 @@ export class MapComponent implements OnInit {
   }
 
   buy(plot: number) {
-    this.ideService.open();
+    this.ideService.displayIdeByTask("tutorial_house");
   }
 
 }

@@ -17,13 +17,10 @@
     </main>
     <footer>
       <div class="icon">
-        <img src="../../../assets/characters/valery.png">
+        <img src="../../../assets/characters/{{task.icon}}.png">
       </div>
       <div class="transcript">
-        <p>
-        Build yourself a house! <br>
-        A house requires a <b>roof</b>, <b>body</b> and a <b>door.</b>
-        </p>
+        <p [innerHTML] = "task.transcript | safeHtml" ></p>
       </div>
       <hr />
 

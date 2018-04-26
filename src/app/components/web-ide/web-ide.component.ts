@@ -1,22 +1,23 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {WebIdeService} from '../../_services/web-ide.service';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {SafeHtml} from '@angular/platform-browser';
+import {Task} from '../../_models/task-model';
 
 @Component({
   selector: 'web-ide',
   templateUrl: './web-ide.component.html',
   styleUrls: ['./web-ide.component.scss']
 })
-export class WebIdeComponent implements OnInit, OnChanges {
+export class WebIdeComponent implements OnInit {
 
   visible: boolean;
   code: string;
   preview: SafeHtml;
+  task: Task;
 
   private defaultTemplate: string;
 
-  constructor(private ideService: WebIdeService,
-              private sanitizer: DomSanitizer) {
+  constructor(private ideService: WebIdeService) {
     this.defaultTemplate =
       '<!DOCTYPE html>\n' +
       '<html>\n' +
@@ -28,16 +29,13 @@ export class WebIdeComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.ideService.getState().subscribe(
       res => {
-        this.visible = res;
+        this.visible = (res != null);
+        this.task = res;
       }
     );
 
     this.code = this.defaultTemplate;
 
-  }
-
-  ngOnChanges() {
-    // this.preview = this.sanitizer.bypassSecurityTrustHtml(this.code);
   }
 
   close() {
