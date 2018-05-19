@@ -16,6 +16,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PropsService } from './_services/props.service';
 import { MapComponent } from './components/game/map/map.component';
 import { HeaderComponent } from './components/game/header/header.component';
+import { BuilderComponent } from './components/builder/builder.component';
+import { EditorComponent } from './components/builder/editor/editor.component';
+import { ResourcesComponent } from './components/builder/resources/resources.component';
+import { InventoryComponent } from './components/builder/inventory/inventory.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { HeaderComponent } from './components/game/header/header.component';
     WebIdeComponent,
     SafeHtmlPipe,
     MapComponent,
-    HeaderComponent
+    HeaderComponent,
+    BuilderComponent,
+    EditorComponent,
+    ResourcesComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
