@@ -38,6 +38,7 @@ export class WebIdeService {
           for (let key in res) {
             if (i == currentTask) {
               this.open(res[key] as Task);
+              //this.showBuilder = true;
               break;
             }
 
@@ -46,6 +47,8 @@ export class WebIdeService {
         }
       )
   }
+
+
 
   private nextTask() {
     const task = this.getCurrentTask() + 1;
