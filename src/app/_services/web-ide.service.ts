@@ -17,12 +17,12 @@ export class WebIdeService {
 
   private open(task: Task) {
     this.visible.next(task);
-    this.nextTask();
+    // this.nextTask(); todo: Do this on complete of task
   }
 
   public close() {
     this.visible.next(null);
-    this.previousTask();
+    // this.previousTask(); // todo: get rid of this
   }
 
   public getState(): Observable<Task> {

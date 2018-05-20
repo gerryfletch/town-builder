@@ -10,7 +10,7 @@
            style="background-color: #fdf6e3"
       ></div>
       <div id="preview-container">
-        <preview></preview>
+        <preview [html]="code | safeHtml"></preview>
       </div>
     </main>
     <footer>

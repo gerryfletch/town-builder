@@ -16,6 +16,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PropsService } from './_services/props.service';
 import { MapComponent } from './components/game/map/map.component';
 import { HeaderComponent } from './components/game/header/header.component';
+import { RoutingModule } from './routing.module';
+import { AboutComponent } from './components/about/about/about.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { HeaderComponent } from './components/game/header/header.component';
     WebIdeComponent,
     SafeHtmlPipe,
     MapComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AceEditorModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RoutingModule
   ],
   providers: [DialogueService, WebIdeService, PropsService],
   bootstrap: [AppComponent]
