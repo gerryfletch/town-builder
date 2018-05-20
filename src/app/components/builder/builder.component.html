@@ -4,13 +4,13 @@
 
     <main>
       <div id="activity-container">
-        <editor [active]="activeView[0]"></editor>
+        <editor (notify)='updatePreview($event)' [active]="activeView[0]"></editor>
         <inventory [inventory]="this.inventory" [active]="activeView[2]"></inventory>
         <resources [res]='this.res' [active]="activeView[4]"></resources>
       </div>
 
       <div id="preview-container">
-        <preview></preview>
+        <preview [html]="code | safeHtml"></preview>
       </div>
     </main>
 

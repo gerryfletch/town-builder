@@ -1,4 +1,4 @@
-<div *ngIf="active" id="editor" ace-editor
+<div *ngIf="active" id="editor" (keyup)="updatePreview()" ace-editor
      [(text)]="this.code"
      [mode]="'html'"
      [theme]="'eclipse'"
