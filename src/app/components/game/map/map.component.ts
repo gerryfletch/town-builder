@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PropsService} from '../../../_services/props.service';
 import {Prop} from '../../../_models/prop-model';
 import {WebIdeService} from '../../../_services/web-ide.service';
+import {BuilderComponent} from "../../builder/builder.component";
 
 @Component({
   selector: 'map',

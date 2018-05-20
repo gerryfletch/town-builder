@@ -1,9 +1,29 @@
 {
   "tutorial_house": {
+    "id": "0",
     "icon": "valery",
     "transcript": "Build yourself a house!<br> A house requires a <b>roof</b>, <b>body</b> and a <b>door.</b>",
     "plans": "assets/plans/tutorial_house.png",
-    "inventory": null,
+    "inventory": [
+      {
+        "name": "item1",
+        "img" : "assets/plans/tutorial_house.png",
+        "tag": "<item1>",
+        "description": "An item used to build your house"
+      },
+      {
+        "name": "item2",
+        "img" : "assets/plans/tutorial_house.png",
+        "tag": "<item1>",
+        "description": "An item used to build your house"
+      },
+      {
+        "name": "item3",
+        "img" : "assets/plans/tutorial_house.png",
+        "tag": "<item1>",
+        "description": "An item used to build your house"
+      }
+    ],
     "hints": [
       "Every house requires a base, body, and roof.",
       "Try adding in decorations. Try the class 'window'!"
@@ -17,6 +37,7 @@
     ]
   },
   "town_hall": {
+    "id": "1",
     "icon": "leah",
     "transcript": "If we're going to make this town, we're going to need a town hall!",
     "plans": "assets/plans/town_hall.png",
