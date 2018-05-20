@@ -1,0 +1,11 @@
+<div *ngIf="active">
+  <h1>Resources</h1>
+  <p>These links will help you in your adventures!</p><br>
+
+  <ul>
+    <li *ngFor="let r of res">
+      <a href="{{r.link}}">{{r.name}}</a><br>
+      {{r.description}}
+    </li>
+  </ul>
+</div>

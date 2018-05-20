@@ -1,0 +1,13 @@
+<div *ngIf="active">
+  <h1>Inventory</h1>
+  <p>These items can be used to create your building!</p><br>
+
+  <ul>
+    <li *ngFor="let i of inventory">
+      {{i.name}}<br>
+      <img src="{{i.img}}">
+      {{i.tag}}<br>
+      {{i.description}}
+    </li>
+  </ul>
+</div>
