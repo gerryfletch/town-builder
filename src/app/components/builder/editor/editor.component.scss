@@ -1,0 +1,13 @@
+#editor {
+  height: 100%;
+  float: left;
+}
+
+#editor {
+  width: 100%;
+
+  .ace_content, .ace_tm, .ace-tm {
+    background-color: #fdf6e3!important;
+  }
+
+}
