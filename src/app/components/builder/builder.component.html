@@ -3,15 +3,9 @@
   <div id="builder">
 
     <main>
-      <div id="activity-container">
-        <editor (notify)='updatePreview($event)' [active]="activeView[0]"></editor>
+        <editor [active]="activeView[0]"></editor>
         <inventory [inventory]="this.inventory" [active]="activeView[2]"></inventory>
         <resources [res]='this.res' [active]="activeView[4]"></resources>
-      </div>
-
-      <div id="preview-container">
-        <preview [html]="code | safeHtml"></preview>
-      </div>
     </main>
 
     <footer>
@@ -25,7 +19,7 @@
 
       <div class="button" (click)="changeView(0)">
         <button class="light">
-          <img src="../../../assets/props/icons/map.png"/>
+          <img src="../../../assets/props/icons/editor-button-small.png"/>
         </button>
         <p>EDITOR</p>
       </div>

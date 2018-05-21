@@ -1,13 +1,23 @@
 #editor {
+  border-right: 16px solid transparent;
+  border-image: url('../../../../assets/props/single-border-vertical.png') 24 round;
+  width: calc(50% - 8px);
   height: 100%;
   float: left;
-}
-
-#editor {
-  width: 100%;
-
   .ace_content, .ace_tm, .ace-tm {
     background-color: #fdf6e3!important;
   }
+}
 
+#preview-container {
+  width: calc(50% - 8px);
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  //background: url('../../../assets/img/preview-background.png') no-repeat 50% 50%;
 }

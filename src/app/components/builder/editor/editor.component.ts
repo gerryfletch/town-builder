@@ -10,7 +10,6 @@ export class EditorComponent implements OnInit {
 
   code: string;
   @Input() active: boolean;
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
   //task: Task; //use for saving code in the future? added identifier to Task model for this purpose
 
   private defaultTemplate: string;
@@ -22,11 +21,6 @@ export class EditorComponent implements OnInit {
       '    <body>\n        \n' +
       '    </body>\n'+
       '</html>';
-  }
-
-  updatePreview() {
-    //do something
-    this.notify.emit(this.code);
   }
 
   ngOnInit() {
