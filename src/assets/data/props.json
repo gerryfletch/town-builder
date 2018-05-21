@@ -1,29 +1,30 @@
 {
-    "props": [
-        {
-            "name": "For sale sign",
-            "image": "props/sign.png",
-            "coordinate": 1230,
-            "action": "buy(1)"
-        },
-        {
-            "name": "For sale sign",
-            "image": "props/sign.png",
-            "coordinate": 1741,
-            "action": null
-        },
-        {
-            "name": "Valery",
-            "image": "characters/valery-prop.png",
-            "coordinate": 700,
-            "action": null
-
-        },
-        {
-            "name": "Leah",
-            "image": "characters/leah-prop.png",
-            "coordinate": 750,
-            "action": null
-        }
-    ]
+  "props": [
+    {
+      "name": "For sale sign",
+      "image": "props/sign.png",
+      "coordinate": 1230,
+      "action": "buy(1)",
+      "plot_id": 1
+    },
+    {
+      "name": "For sale sign",
+      "image": "props/sign.png",
+      "coordinate": 1741,
+      "action": null,
+      "plot_id": 2
+    },
+    {
+      "name": "Valery",
+      "image": "characters/valery-prop.png",
+      "coordinate": 700,
+      "action": null
+    },
+    {
+      "name": "Leah",
+      "image": "characters/leah-prop.png",
+      "coordinate": 750,
+      "action": null
+    }
+  ]
 }

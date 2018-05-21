@@ -189,7 +189,7 @@ main {
     }
   }
 
-  #welcome, #about {
+  #welcome {
     display: flex;
   }
 
@@ -207,17 +207,55 @@ main {
   }
 
   #about {
-    display: flex;
+    .squares {
+      width: 100%;
+      display: flex;
+    }
 
     .square {
       &:last-child {
         background: url('../../../../assets/backgrounds/rockywall.png');
       }
 
-      &:first-child .content {
+      &:first-child {
         background-image: url('../../../../assets/backgrounds/valery.png');
         background-size: cover;
         background-position: 50% 50%;
+      }
+
+    }
+
+    .items {
+      width: 100%;
+      display: flex;
+      margin-top: 50px;
+
+      .item {
+        padding: 40px;
+        width: calc(100% / 3);
+        height: 270px;
+        background-color: rgba(0, 0, 0, 0.05);
+
+        &:nth-child(2) {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+          font-size: 1.8em;
+          font-weight: 800;
+          color: rgba(0, 0, 0, 0.9);
+          text-align: center;
+        }
+
+        p {
+          font-size: 1.3em;
+          font-weight: 300;
+          line-height: 1.2em;
+          text-align: center;
+          margin-top: 30px;
+          color: #444;
+        }
+
       }
 
     }
