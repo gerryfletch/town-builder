@@ -4,7 +4,7 @@
      [theme]="'eclipse'"
      style="background-color: #fdf6e3"
 ></div>
-<div *ngIf="active"id="preview-container">
-  <preview [html]="code"></preview>
+<div *ngIf="active" id="preview-container">
+  <preview [html]="code | safeHtml"></preview>
 </div>
 

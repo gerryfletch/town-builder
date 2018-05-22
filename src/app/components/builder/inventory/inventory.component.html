@@ -1,13 +1,61 @@
 <div *ngIf="active" id="main">
-  <h1>Inventory</h1>
-  <p>These items can be used to create your building!</p><br>
+  <div id="nav">
+    <div id="header">
+      <p>INVENTORY</p>
+    </div>
+    <div id="menu">
+      <div class="button">
+        <button class="light">
+          <p>BUILDING BLOCKS</p>
+        </button>
+      </div>
 
-  <ul>
-    <li *ngFor="let i of inventory">
-      {{i.name}}<br>
-      <img src="{{i.img}}">
-      {{i.tag}}<br>
-      {{i.description}}
-    </li>
-  </ul>
+      <div class="button">
+        <button class="light">
+          <p>DECORATIVE BLOCKS</p>
+        </button>
+      </div>
+
+      <div class="button">
+        <button class="light">
+          <p>STYLE CLASSES</p>
+        </button>
+      </div>
+
+      <div class="button">
+        <button class="light">
+          <p>CUSTOM BLOCKS</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="item-container">
+    <div id="item-display" *ngFor="let i of inventory">
+      <div id="item-image">
+        <img src="{{i.img}}">
+      </div>
+      <div id="item-desc">
+        <p>{{i.description}}</p>
+      </div>
+      <div id="item-tag">
+        <p>{{i.tag}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!--<div id="ittem-display">
+    <ul>
+      <li *ngFor="let i of inventory">
+        {{i.name}}<br>
+        <img src="{{i.img}}">
+        {{i.tag}}<br>
+        {{i.description}}
+      </li>
+    </ul>
+  </div>-->
+
+
+
+
 </div>

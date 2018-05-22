@@ -118,20 +118,6 @@
         font-weight: 600;
         color: rgba(0, 0, 0, 0.7);
       }
-
-      &:hover {
-        * {
-          cursor: pointer;
-        }
-        button {
-          img {
-            opacity: 0.8;
-          }
-        }
-        p {
-          color: rgba(0, 0, 0, 0.9);
-        }
-      }
     }
 
     .complete {
