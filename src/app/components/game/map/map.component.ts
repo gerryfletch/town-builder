@@ -30,6 +30,7 @@ export class MapComponent implements OnInit {
   }
 
   buy(plot: number) {
+    console.log("in buy()");
     this.ideService.openCurrentTask();
   }
 

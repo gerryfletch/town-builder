@@ -1,11 +1,49 @@
-<div *ngIf="active">
-  <h1>Resources</h1>
-  <p>These links will help you in your adventures!</p><br>
+<div *ngIf="active" id="main">
+  <div id="nav">
+    <div class="top-space"></div>
+    <div id="header">
+      <p>RESOURCES</p>
+    </div>
+    <div id="menu">
+      <div class="button-border">
+        <div class="button">
+          HTML
+        </div>
+      </div>
 
-  <ul>
-    <li *ngFor="let r of res">
-      <a href="{{r.link}}">{{r.name}}</a><br>
-      {{r.description}}
-    </li>
-  </ul>
+      <div class="button-border">
+        <div class="button">
+          CSS
+        </div>
+      </div>
+
+      <div class="button-border">
+        <div class="button">
+          JAVASCRIPT
+        </div>
+      </div>
+
+      <div class="button-border">
+        <div class="button">
+          OTHER
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="res-container">
+    <div class="top-space"></div>
+    <div id="resources">
+      <div id="res-display" *ngFor="let r of res">
+
+        <div id="res-name">
+          {{r.name}}
+        </div>
+
+        <div id="res-link">
+          <a href="{{r.link}}">{{r.link}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
