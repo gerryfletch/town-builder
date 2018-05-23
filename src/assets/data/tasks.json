@@ -6,22 +6,39 @@
     "plans": "assets/plans/tutorial_house.png",
     "inventory": [
       {
-        "name": "item1",
-        "img" : "assets/plans/tutorial_house.png",
-        "tag": "<item1>",
-        "description": "An item used to build your house"
+        "name": "roof",
+        "img" : "roof.png",
+        "id": "#roof",
+        "class": "NA",
+        "description": "A roof to cover your house"
       },
       {
-        "name": "item2",
-        "img" : "assets/plans/tutorial_house.png",
-        "tag": "<item1>",
-        "description": "An item used to build your house"
+        "name": "row",
+        "img" : "row.png",
+        "id": "NA",
+        "class": ".row",
+        "description": "Your house needs floors! use this to add one to your house"
       },
       {
-        "name": "item3",
-        "img" : "assets/plans/tutorial_house.png",
-        "tag": "<item1>",
-        "description": "An item used to build your house"
+        "name": "window",
+        "img" : "window.png",
+        "id": "NA",
+        "class": ".window",
+        "description": "Nobody wants a dark house! let's get some sun in there"
+      },
+      {
+        "name": "door",
+        "img" : "door.png",
+        "id": "NA",
+        "class": ".door",
+        "description": "Give visitors a warm welcome when they walk in through one of these"
+      },
+      {
+        "name": "floor",
+        "img" : "floor.png",
+        "id": "#floo",
+        "class": "NA",
+        "description": "A good foundation for your house"
       }
     ],
     "hints": [
@@ -41,7 +58,43 @@
     "icon": "leah",
     "transcript": "If we're going to make this town, we're going to need a town hall!",
     "plans": "assets/plans/town_hall.png",
-    "inventory": null,
+    "inventory": [
+      {
+        "name": "roof",
+        "img" : "roof.png",
+        "id": "#roof",
+        "class": "NA",
+        "description": "A roof to cover your house"
+      },
+      {
+        "name": "row",
+        "img" : "row.png",
+        "id": "NA",
+        "class": ".row",
+        "description": "Your house needs floors! use this to add one to your house"
+      },
+      {
+        "name": "window",
+        "img" : "window.png",
+        "id": "NA",
+        "class": ".window",
+        "description": "Nobody wants a dark house! let's get some sun in there"
+      },
+      {
+        "name": "door",
+        "img" : "door.png",
+        "id": "NA",
+        "class": ".door",
+        "description": "Give visitors a warm welcome when they walk in through one of these"
+      },
+      {
+        "name": "",
+        "img" : ".png",
+        "id": "",
+        "class": "",
+        "description": ""
+      }
+    ],
     "hints": [
       "A town hall needs to be large enough to accommodate all of the residents",
       "As the centre piece of our town, we should make the town hall special in some way."

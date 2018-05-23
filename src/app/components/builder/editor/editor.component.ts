@@ -1,5 +1,5 @@
-import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-
+import {Component, OnInit, Input} from '@angular/core';
+import {SafeHtml} from "@angular/platform-browser";
 
 @Component({
   selector: 'editor',
@@ -10,6 +10,7 @@ export class EditorComponent implements OnInit {
 
   code: string;
   @Input() active: boolean;
+  preview: SafeHtml;
   //task: Task; //use for saving code in the future? added identifier to Task model for this purpose
 
   private defaultTemplate: string;

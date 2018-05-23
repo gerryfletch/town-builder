@@ -2,4 +2,117 @@
   width: 100%;
   height: 100%;
   float: left;
+  font-family: 'VT323', monospace;
+
+  .top-space {
+    height: 5%;
+  }
 }
+
+#nav {
+  border-right: 16px solid transparent;
+  border-image: url('../../../../assets/props/single-border-vertical.png') 24 round;
+  width: calc(20% - 8px);
+  height: 100%;
+  float: left;
+
+  #header {
+    text-align: center;
+    font-size: 4em;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .button-border {
+      border: 10px solid transparent;
+      width: 80%;
+      border-image: url(../../../../assets/img/button-border.png);
+      border-image-repeat: round;
+      border-image-slice: 14;
+      margin-top: 15px;
+      align-self: center;
+    }
+
+    .button {
+      height: 100%;
+      width: 100%;
+      background-color: #d3bf8f;
+      text-align: center;
+      font-size: 1.7em;
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+#item-container {
+  height: 100%;
+  width: calc(80% - 7px);
+  //calc(20% + 8px)
+  float: left;
+  overflow-y: scroll;
+
+  #items {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-evenly;
+    //overflow: -moz-scrollbars-vertical;
+
+    #item-display {
+      //x + 4*4 + 38.4 + 58//112.4
+      height: 259.4px;
+      width: 200px;
+      border: 4px solid #9f7b56;
+      background: #d3bf8f;
+      float: left;
+      margin-top: 15px;
+
+      #item-image {
+        height: 134px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      #item-desc {
+        padding-right: 4px;
+        padding-left: 4px;
+        height: 60px;
+
+        border-top: 4px solid #9f7b56;
+        text-align: center;
+      }
+
+      #item-id {
+        height: 24px;
+        border-top: 4px solid #9f7b56;
+        border-bottom: 4px solid #9f7b56;
+        text-align: center;
+      }
+
+      #item-class {
+        height: 24px;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+p {
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.8);
+
+  b {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+

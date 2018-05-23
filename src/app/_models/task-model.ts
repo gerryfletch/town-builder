@@ -17,6 +17,7 @@ export interface Resource {
 export interface Inventory {
   name: string,
   img: string,
-  tag: string,
+  id: string,
+  class: string,
   description: string
 }

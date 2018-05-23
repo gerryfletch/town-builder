@@ -10,8 +10,11 @@ export class InventoryComponent implements OnInit {
 
   @Input() inventory: Inventory[];
   @Input() active: boolean;
+  pathToFile: string;
 
-  constructor() { }
+  constructor() {
+    this.pathToFile = "../../../../assets/img/inventory/";
+  }
 
   ngOnInit() {
   }

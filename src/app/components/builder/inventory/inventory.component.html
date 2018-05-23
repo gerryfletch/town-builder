@@ -1,13 +1,58 @@
 <div *ngIf="active" id="main">
-  <h1>Inventory</h1>
-  <p>These items can be used to create your building!</p><br>
+  <div id="nav">
+    <div class="top-space"></div>
+    <div id="header">
+      <p>INVENTORY</p>
+    </div>
+    <div id="menu">
+      <div class="button-border">
+        <div class="button">
+          BUILDING BLOCKS
+        </div>
+      </div>
 
-  <ul>
-    <li *ngFor="let i of inventory">
-      {{i.name}}<br>
-      <img src="{{i.img}}">
-      {{i.tag}}<br>
-      {{i.description}}
-    </li>
-  </ul>
+      <div class="button-border">
+        <div class="button">
+          DECORATIVE BLOCKS
+        </div>
+      </div>
+
+      <div class="button-border">
+        <div class="button">
+          STYLE CLASSES
+        </div>
+      </div>
+
+      <div class="button-border">
+        <div class="button">
+          CUSTOM BLOCKS
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="item-container">
+    <div class="top-space"></div>
+    <div id="items">
+      <div id="item-display" *ngFor="let i of inventory">
+
+        <div id="item-image">
+          <img src="{{pathToFile}}{{i.img}}">
+        </div>
+
+        <div id="item-desc">
+          <p>{{i.description}}</p>
+        </div>
+
+        <div id="item-id">
+          <p>{{i.id}}</p>
+        </div>
+
+        <div id="item-class">
+          <p>{{i.class}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
