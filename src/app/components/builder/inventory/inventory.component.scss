@@ -17,6 +17,8 @@
   float: left;
 
   #header {
+    height: 15%;
+    width: 100%;
     text-align: center;
     font-size: 4em;
   }
@@ -34,10 +36,6 @@
       border-image-slice: 14;
       margin-top: 15px;
       align-self: center;
-      z-index: 1;
-      :hover {
-        opacity: 0.5;
-      }
 
       .button {
         height: 100%;
@@ -45,7 +43,6 @@
         background-color: #d3bf8f;
         text-align: center;
         font-size: 1.7em;
-
       }
     }
 
@@ -57,7 +54,6 @@
       border-image-slice: 14;
       margin-top: 15px;
       align-self: center;
-      z-index: 1;
 
       .button {
         height: 100%;
@@ -74,9 +70,8 @@
 
 #item-container {
   height: 100%;
-  width: calc(80% - 7px);
+  width: calc(80% - 8px);
   //calc(20% + 8px)
-  float: left;
   overflow-y: scroll;
 
   #items {
