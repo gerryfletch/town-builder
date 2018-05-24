@@ -5,25 +5,54 @@
       <p>INVENTORY</p>
     </div>
     <div id="menu">
-      <div class="button-border">
+
+     <div class="button-border" (mouseover)="setHover(true, 0)"
+          (mouseleave)="setHover(false, 0)" *ngIf="!this.buttonHover[0]" >
+        <div class="button">
+          BUILDING BLOCKS
+        </div>
+      </div>
+      <div class="button-border-onHover" (mouseover)="setHover(true, 0)"
+           (mouseleave)="setHover(false, 0)" *ngIf="this.buttonHover[0]" >
         <div class="button">
           BUILDING BLOCKS
         </div>
       </div>
 
-      <div class="button-border">
+      <div class="button-border" (mouseover)="setHover(true, 1)"
+           (mouseleave)="setHover(false, 1)" *ngIf="!this.buttonHover[1]" >
+        <div class="button">
+          DECORATIVE BLOCKS
+        </div>
+      </div>
+      <div class="button-border-onHover" (mouseover)="setHover(true, 1)"
+           (mouseleave)="setHover(false, 1)" *ngIf="this.buttonHover[1]" >
         <div class="button">
           DECORATIVE BLOCKS
         </div>
       </div>
 
-      <div class="button-border">
+      <div class="button-border" (mouseover)="setHover(true, 2)"
+           (mouseleave)="setHover(false, 2)" *ngIf="!this.buttonHover[2]" >
+        <div class="button">
+          STYLE CLASSES
+        </div>
+      </div>
+      <div class="button-border-onHover" (mouseover)="setHover(true, 2)"
+           (mouseleave)="setHover(false, 2)" *ngIf="this.buttonHover[2]" >
         <div class="button">
           STYLE CLASSES
         </div>
       </div>
 
-      <div class="button-border">
+      <div class="button-border" (mouseover)="setHover(true, 3)"
+           (mouseleave)="setHover(false, 3)" *ngIf="!this.buttonHover[3]" >
+        <div class="button">
+          CUSTOM BLOCKS
+        </div>
+      </div>
+      <div class="button-border-onHover" (mouseover)="setHover(true, 3)"
+           (mouseleave)="setHover(false, 3)" *ngIf="this.buttonHover[3]" >
         <div class="button">
           CUSTOM BLOCKS
         </div>
